@@ -1,0 +1,28 @@
+{
+  "header": {
+    "title": "Waxing Athens",
+    "subtitle": "Professional care at your home"
+  },
+  "services": {
+    "title": "Our Services",
+    "travelFee": "Travel fee: €{fee} (fixed) - We serve all Athens",
+    "addToCart": "Add to booking",
+    "added": "Added!",
+    "detailsTitle": "Service Details",
+    "includes": "Includes",
+    "close": "Close"
+  },
+  "cart": {
+    "title": "Your Booking",
+    "empty": "No services selected",
+    "subtotal": "Subtotal",
+    "travelFee": "Travel fee",
+    "total": "Total",
+    "checkout": "Book via WhatsApp",
+    "clear": "Clear all"
+  },
+  "nav": {
+    "home": "Home",
+    "booking": "Booking"
+  }
+}

@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Waxing Athens — Mobile-first booking app
 
-## Getting Started
+App mobile-first para serviços de depilação em Atenas. O cliente acessa o link, vê preços, adiciona serviços ao carrinho e finaliza pelo WhatsApp com mensagem pré-preenchida.
 
-First, run the development server:
+## Stack
+
+- Next.js 14 (App Router)
+- Tailwind CSS, Framer Motion
+- Zustand (carrinho persistente), next-intl (EN/PT)
+- Deploy: Vercel
+
+## Desenvolvimento
 
 ```bash
+npm install
+cp .env.local.example .env.local
+# Opcional: defina NEXT_PUBLIC_WHATSAPP_NUMBER no .env.local (ex: 5511995102916)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000). A raiz redireciona para `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variáveis de ambiente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **NEXT_PUBLIC_WHATSAPP_NUMBER** — Número do WhatsApp com código do país, sem `+` nem espaços (ex: `5511995102916` para +55 11 99510-2916).
 
-## Learn More
+## Deploy (Vercel)
 
-To learn more about Next.js, take a look at the following resources:
+1. **Antes:** faça commit e push do projeto (ex.: GitHub).
+2. Acesse [vercel.com](https://vercel.com) e faça login.
+3. **Add New Project** → importe o repositório do projeto.
+4. Em **Environment Variables** adicione:
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER` = `5511995102916`
+5. Clique em **Deploy**. Ao terminar, você recebe um link (ex.: `https://salao-xxx.vercel.app`).
+6. Use esse link na bio, no WhatsApp ou onde quiser; a cada novo push, a Vercel faz redeploy automático.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Lista de serviços por categoria (Face, Body, Intimate)
+- Detalhes do serviço em bottom sheet ao clicar no card
+- Adicionar ao carrinho (ícone + no card ou no detalhe)
+- Carrinho persistente (localStorage) com subtotal, taxa de deslocamento fixa (€5) e total
+- Botão "Reservar via WhatsApp" abre o WhatsApp com mensagem pré-preenchida
+- Navegação: botão central (casa) e ícone do carrinho na barra inferior
+- Idiomas: bandeiras EN/PT no header
+- Toast ao adicionar ao carrinho, cookie consent, FAQ, PWA manifest, error boundaries

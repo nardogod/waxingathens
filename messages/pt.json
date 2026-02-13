@@ -1,0 +1,28 @@
+{
+  "header": {
+    "title": "Depilação Atenas",
+    "subtitle": "Cuidado profissional na sua casa"
+  },
+  "services": {
+    "title": "Nossos Serviços",
+    "travelFee": "Taxa de deslocamento: €{fee} (fixa) - Atendemos em toda Atenas",
+    "addToCart": "Adicionar à reserva",
+    "added": "Adicionado!",
+    "detailsTitle": "Detalhes do Serviço",
+    "includes": "Inclui",
+    "close": "Fechar"
+  },
+  "cart": {
+    "title": "Sua Reserva",
+    "empty": "Nenhum serviço selecionado",
+    "subtotal": "Subtotal",
+    "travelFee": "Taxa de deslocamento",
+    "total": "Total",
+    "checkout": "Reservar via WhatsApp",
+    "clear": "Limpar tudo"
+  },
+  "nav": {
+    "home": "Início",
+    "booking": "Reserva"
+  }
+}
