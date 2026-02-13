@@ -1,6 +1,8 @@
 # Waxing Athens — Mobile-first booking app
 
-App mobile-first para serviços de depilação em Atenas. O cliente acessa o link, vê preços, adiciona serviços ao carrinho e finaliza pelo WhatsApp com mensagem pré-preenchida.
+App mobile-first para serviços de depilação. O cliente acessa o link, vê preços (Brasil R$ / Grécia €), adiciona serviços ao carrinho e finaliza pelo WhatsApp com mensagem pré-preenchida.
+
+**Documentação:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — diagramas Mermaid (fluxo do usuário, componentes, rotas, camadas).
 
 ## Stack
 

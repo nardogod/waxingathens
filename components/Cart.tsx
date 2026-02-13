@@ -7,7 +7,6 @@ import type { Service } from "@/lib/data/services";
 import {
   getServicePrice,
   getTravelFee,
-  getCurrencySymbol,
   formatPrice,
 } from "@/lib/data/services";
 
@@ -37,7 +36,6 @@ export default function Cart({
 }: CartProps) {
   const [checkoutDisabled, setCheckoutDisabled] = useState(false);
   const isPt = locale === "pt";
-  const symbol = getCurrencySymbol(locale);
   const travelFee = getTravelFee(locale);
   const subtotal = items.reduce(
     (sum, item) => sum + getServicePrice(item.service, locale) * item.quantity,

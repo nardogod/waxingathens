@@ -84,11 +84,11 @@ export default function LocalePage() {
         <p className="mb-2 flex items-center gap-1.5 text-left font-serif text-xs italic tracking-[0.1em] text-apple-text/90">
           by Lais Santana <span className="not-italic" aria-hidden>💄</span>
           <a
-            href="https://instagram.com/laissantana_lk"
+            href="https://instagram.com/lais.santana_lk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 text-apple-text/80 hover:text-apple-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-apple-accent rounded"
-            aria-label="Instagram @laissantana_lk"
+            aria-label="Instagram @lais.santana_lk"
           >
             <Instagram className="w-3.5 h-3.5" strokeWidth={1.5} />
           </a>
