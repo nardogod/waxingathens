@@ -24,6 +24,9 @@ export async function generateMetadata({
   const description = isPt
     ? "Depilação profissional na sua casa. Veja preços, monte sua reserva e finalize pelo WhatsApp. Só atende mulheres."
     : "Professional waxing at your home. See prices, build your booking and finish via WhatsApp. Women only.";
+  const baseUrl = "https://waxingathens.vercel.app";
+  const imageUrl = `${baseUrl}/og-image.png`;
+
   return {
     title: isPt
       ? "Depilação Atenas | Depilação profissional na sua casa"
@@ -34,13 +37,13 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `/${locale}`,
+      url: `${baseUrl}/${locale}`,
       siteName: "Waxing Athens",
       locale: isPt ? "pt_BR" : "en_US",
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: "By Lais Santana - Depilação profissional",
@@ -51,7 +54,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.png"],
+      images: [imageUrl],
     },
   };
 }
