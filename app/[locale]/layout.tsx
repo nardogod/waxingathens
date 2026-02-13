@@ -25,7 +25,7 @@ export async function generateMetadata({
     ? "Depilação profissional na sua casa. Veja preços, monte sua reserva e finalize pelo WhatsApp. Só atende mulheres."
     : "Professional waxing at your home. See prices, build your booking and finish via WhatsApp. Women only.";
   const baseUrl = "https://waxingathens.vercel.app";
-  const imageUrl = `${baseUrl}/og-image.png`;
+  const imageUrl = `${baseUrl}/og-image.jpg`;
 
   return {
     title: isPt
