@@ -18,18 +18,31 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await resolveParams(params);
   const isPt = locale === "pt";
+  const title = isPt
+    ? "Depilação Atenas | by Lais Santana"
+    : "Waxing Athens | by Lais Santana";
+  const description = isPt
+    ? "Depilação profissional na sua casa. Veja preços, monte sua reserva e finalize pelo WhatsApp. Só atende mulheres."
+    : "Professional waxing at your home. See prices, build your booking and finish via WhatsApp. Women only.";
   return {
     title: isPt
       ? "Depilação Atenas | Depilação profissional na sua casa"
       : "Waxing Athens | Professional Waxing at Your Home",
     description: isPt
-      ? "Depilação brasileira profissional em Atenas. Atendimento no local. Taxa de deslocamento fixa."
-      : "Professional Brazilian waxing in Athens. At-home service. Fixed travel fee.",
+      ? "Depilação brasileira profissional. Atendimento no local. Taxa de deslocamento fixa. Reserve pelo WhatsApp."
+      : "Professional Brazilian waxing. At-home service. Fixed travel fee. Book via WhatsApp.",
     openGraph: {
-      title: isPt ? "Depilação Atenas" : "Waxing Athens",
-      description: isPt
-        ? "Depilação profissional na sua casa"
-        : "Professional waxing at your home",
+      title,
+      description,
+      url: `/${locale}`,
+      siteName: "Waxing Athens",
+      locale: isPt ? "pt_BR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }

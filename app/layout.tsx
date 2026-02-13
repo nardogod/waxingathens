@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://waxingathens.vercel.app"),
   title: "Waxing Athens | Professional Waxing Services",
   description:
     "Professional Brazilian waxing at your home in Athens. Premium care.",
