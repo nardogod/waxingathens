@@ -14,7 +14,7 @@ App mobile-first para serviços de depilação em Atenas. O cliente acessa o lin
 ```bash
 npm install
 cp .env.local.example .env.local
-# Opcional: defina NEXT_PUBLIC_WHATSAPP_NUMBER no .env.local (ex: 5511995102916)
+# Opcional: defina NEXT_PUBLIC_WHATSAPP_NUMBER no .env.local (ex:)
 npm run dev
 ```
 
@@ -22,7 +22,7 @@ Acesse [http://localhost:3000](http://localhost:3000). A raiz redireciona para `
 
 ## Variáveis de ambiente
 
-- **NEXT_PUBLIC_WHATSAPP_NUMBER** — Número do WhatsApp com código do país, sem `+` nem espaços (ex: `5511995102916` para +55 11 99510-2916).
+- **NEXT_PUBLIC_WHATSAPP_NUMBER** — Número do WhatsApp com código do país, sem `+` nem espaços (ex: `).
 
 ## Deploy (Vercel)
 
@@ -30,7 +30,7 @@ Acesse [http://localhost:3000](http://localhost:3000). A raiz redireciona para `
 2. Acesse [vercel.com](https://vercel.com) e faça login.
 3. **Add New Project** → importe o repositório do projeto.
 4. Em **Environment Variables** adicione:
-   - `NEXT_PUBLIC_WHATSAPP_NUMBER` = `5511995102916`
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER` = ``
 5. Clique em **Deploy**. Ao terminar, você recebe um link (ex.: `https://salao-xxx.vercel.app`).
 6. Use esse link na bio, no WhatsApp ou onde quiser; a cada novo push, a Vercel faz redeploy automático.
 
